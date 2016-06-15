@@ -19,9 +19,21 @@
         <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
         <div class="row">
             <div class="spann11">
-                <h2 ng-bind-template="{{event.name}} {{event.date}}"></h2>
+                <h2 ng-class="myclass" ng-bind-template="{{event.name}} {{event.date}}"></h2>
             </div>
         </div>
+
+        <button class="btn" ng-disabled="buttonDisabled">Disabled</button>
+
+        <div ng-non-bindable>{{1 + 2}}</div>
+
+        <div ng-bind="mylist"></div>
+
+        <div ng-bind-html-unsafe="snippet">some title</div>
+        <div ng-bind-html="snippet">some title</div>
+
+        <h2 ng-show="boolValue">Show This</h2>
+        <h2 ng-hide="boolValue">Hide This</h2>
         <div class="row">
             <div class="span3">
                 <div><strong>Date:</strong> {{event.date}}</div>
@@ -68,10 +80,12 @@
     </div>
 </div>
 
+
 <script src="D:/IT/AngularFjs/jquery.min.js"></script>
 <script src="D:/IT/AngularFjs/underscore-1.4.4.min.js"></script>
 <script src="D:/IT/AngularFjs/bootstrap.min.js"></script>
 <script src="D:/IT/AngularFjs/angular.js"></script>
+<script src="D:/IT/AngularFjs/angular-sanitize.js"></script>
 <script src="D:/IT/AngularFjs/app.js"></script>
 <script src="D:/IT/AngularFjs/EventController.js"></script>
 </body>
